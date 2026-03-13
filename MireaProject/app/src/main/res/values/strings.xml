@@ -11,4 +11,5 @@
     <string name="ntm_07_mail_ru">ntm-07@mail.ru</string>
     <string name="home_fragment">Home Fragment</string>
     <string name="settings_fragment">Settings Fragment</string>
+    <string name="Browser">Browser</string>
 </resources>
