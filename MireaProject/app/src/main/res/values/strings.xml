@@ -12,4 +12,5 @@
     <string name="home_fragment">Home Fragment</string>
     <string name="settings_fragment">Settings Fragment</string>
     <string name="Browser">Browser</string>
+    <string name="music">Music</string>
 </resources>

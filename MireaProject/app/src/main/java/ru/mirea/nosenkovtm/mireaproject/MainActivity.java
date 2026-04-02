@@ -13,21 +13,24 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
+import ru.mirea.nosenkovtm.mireaproject.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private DrawerLayout drawerLayout;
+    private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        Toolbar toolbar = binding.toolbar;
         setSupportActionBar(toolbar);
 
-        drawerLayout = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
+        drawerLayout = binding.drawerLayout;
+        NavigationView navigationView = binding.navView;
         navigationView.setNavigationItemSelectedListener(this);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.open_nav, R.string.close_nav);
@@ -44,8 +47,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.nav_home) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
-        } else {
+        } else if (item.getItemId() == R.id.nav_browser) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new BrowserFragment()).commit();
+        } else {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MusicFragment()).commit();
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);
