@@ -22,5 +22,20 @@
             android:icon="@drawable/nav_music"
             android:title="@string/music"/>
 
+        <item
+            android:id="@+id/nav_compass"
+            android:icon="@drawable/nav_compass"
+            android:title="@string/compass"/>
+
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/nav_camera"
+            android:title="@string/camera"/>
+
+        <item
+            android:id="@+id/nav_microphone"
+            android:icon="@drawable/nav_microphone"
+            android:title="@string/microphone"/>
+
     </group>
 </menu>
