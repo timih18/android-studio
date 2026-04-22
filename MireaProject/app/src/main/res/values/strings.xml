@@ -16,4 +16,6 @@
     <string name="compass">Compass</string>
     <string name="camera">Camera</string>
     <string name="microphone">Microphone</string>
+    <string name="profile">Profile</string>
+    <string name="file">File</string>
 </resources>

@@ -76,8 +76,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CompassFragment()).commit();
         } else if (item.getItemId() == R.id.nav_camera) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CameraFragment()).commit();
-        }  else if (item.getItemId() == R.id.nav_microphone) {
+        } else if (item.getItemId() == R.id.nav_microphone) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new MicrophoneFragment()).commit();
+        } else if (item.getItemId() == R.id.nav_profile) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new ProfileFragment()).commit();
+        } else if (item.getItemId() == R.id.nav_file) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new FileFragment()).commit();
         }
 
         drawerLayout.closeDrawer(GravityCompat.START);

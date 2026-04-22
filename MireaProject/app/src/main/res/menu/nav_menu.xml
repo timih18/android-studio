@@ -37,5 +37,15 @@
             android:icon="@drawable/nav_microphone"
             android:title="@string/microphone"/>
 
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/nav_profile"
+            android:title="@string/profile"/>
+
+        <item
+            android:id="@+id/nav_file"
+            android:icon="@drawable/nav_file"
+            android:title="@string/file"/>
+
     </group>
 </menu>
